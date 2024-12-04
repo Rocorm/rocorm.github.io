@@ -1,0 +1,104 @@
+/* Estilo General */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #34495e;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Sección principal */
+  main {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  h2 {
+    color: #2980b9;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    flex: 1 1 calc(45% - 1rem);
+    background-color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card img {
+    max-width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Botones */
+  button {
+    background-color: #2980b9;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1f618d;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.5);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
