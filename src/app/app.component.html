@@ -8,36 +8,31 @@
     --border-radius: 8px;
   }
   @media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-    gap: 2rem;
+    .card-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    header {
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    main {
+      padding: 1.5rem;
+    }
   }
 
   header {
-    padding: 1.5rem;
-    font-size: 0.9rem;
+    background: var(--header-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("assets/background.jpg");
+    background-size: cover;
+    background-position: center;
   }
-
-  main {
-    padding: 1.5rem;
-  }
-}
-
-
-  header {
-  background: var(--header-color);
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('assets/background.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
 
   header h1 {
     font-size: 2.5rem;
@@ -49,14 +44,13 @@
   }
 
   main {
-  background: var(--background-color);
-  padding: 3rem;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: var(--border-radius);
-  margin-top: 1rem;
-}
-
+    background: var(--background-color);
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+  }
 
   section {
     margin: 2rem auto;
@@ -77,27 +71,35 @@
   }
 
   .card {
-  background: white;
-  border: 1px solid #dee2e6;
-  border-radius: var(--border-radius);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  padding: 1.5rem;
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-
-  .card img {
-    width: 100%;
-    height: auto;
+    background: white;
+    border: 1px solid #dee2e6;
     border-radius: var(--border-radius);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 1.5rem;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Centra el texto */
+}
+
+.card-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: var(--border-radius); /* Aplica el borde redondeado */
+  object-fit: cover; /* Asegura que la imagen mantenga proporción */
+  margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
+}
 
   .card h3 {
     margin: 1rem 0 0.5rem;
@@ -106,34 +108,34 @@
   }
 
   footer {
-  text-align: center;
-  background: var(--header-color);
-  color: white;
-  padding: 2rem;
-  margin-top: 2rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-top: 4px solid var(--highlight-color);
-}
+    text-align: center;
+    background: var(--header-color);
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-top: 4px solid var(--highlight-color);
+  }
 
-footer a {
-  color: var(--highlight-color);
-  text-decoration: none;
-}
+  footer a {
+    color: var(--highlight-color);
+    text-decoration: none;
+  }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
+  footer a:hover {
+    text-decoration: underline;
+  }
 </style>
 
 <header>
   <h1>Bienvenido a GeoHidalgo</h1>
   <p>
     Tu fuente confiable de información sobre el estado de Hidalgo.<br />
-    Elaborado por: Ayala Chávez Jorge Manuel, Del Moral González Juan Pablo, Juárez Villalobos Daniel,
-    Maciel Luengas Javier Roberto, Rubí Morales Osmar Rodrigo, Sánchez Cárdenas Brenda,
-    Veritz López Marleny y Zamudio Gamirio Carlos Alberto.
+    Elaborado por: Ayala Chávez Jorge Manuel, Del Moral González Juan Pablo,
+    Juárez Villalobos Daniel, Maciel Luengas Javier Roberto, Rubí Morales Osmar
+    Rodrigo, Sánchez Cárdenas Brenda, Veritz López Marleny y Zamudio Gamirio
+    Carlos Alberto.
   </p>
 </header>
 
@@ -141,429 +143,1023 @@ footer a:hover {
   <section>
     <h2>El Geoportal de Ordenamiento Territorial del Estado de Hidalgo</h2>
     <p>
-      Este geoportal es una plataforma digital diseñada para centralizar, visualizar y analizar información clave
-      relacionada con el territorio del estado de Hidalgo.
+      Este geoportal es una plataforma digital diseñada para centralizar,
+      visualizar y analizar información clave relacionada con el territorio del
+      estado de Hidalgo.
     </p>
   </section>
 
   <section class="card-container">
     <!-- Generalidades -->
-    <div class="card">
-      <img src="assets/generalidades.jpg" alt="Generalidades" />
+    <div class="card-img">
+      <img src="src/assets/images/generalidades.png" alt="Generalidades" />
       <h3>Generalidades</h3>
       <p>
-        Su objetivo principal es facilitar la toma de decisiones informadas para promover el desarrollo sostenible,
-        la protección ambiental y el bienestar de las comunidades.
+        Su objetivo principal es facilitar la toma de decisiones informadas para
+        promover el desarrollo sostenible, la protección ambiental y el
+        bienestar de las comunidades.
       </p>
     </div>
 
     <!-- Aplicaciones -->
-    <div class="card">
-      <img src="assets/aplicaciones.jpg" alt="Aplicaciones" />
+    <div class="card-img">
+      <img src="src/assets/images/image28.jpg" alt="Aplicaciones" />
       <h3>Aplicaciones</h3>
       <p>
-        Aquí podrás encontrar mapas interactivos, datos demográficos, información normativa y herramientas visuales
-        de análisis geográfico que apoyan la planificación territorial, fomentan la transparencia y fortalecen la
-        participación ciudadana.
+        Aquí podrás encontrar mapas interactivos, datos demográficos,
+        información normativa y herramientas visuales de análisis geográfico que
+        apoyan la planificación territorial, fomentan la transparencia y
+        fortalecen la participación ciudadana.
       </p>
     </div>
 
     <!-- ¿Por qué es importante? -->
-    <div class="card">
-      <img src="assets/importancia.jpg" alt="¿Por qué es importante?" />
+    <div class="card-img">
+      <img src="src/assets/images/ot.png" alt="¿Por qué es importante?" />
       <h3>¿Por qué es importante?</h3>
       <p>
-        El ordenamiento territorial es una herramienta esencial para gestionar los recursos naturales, planificar el
-        crecimiento urbano y rural, y minimizar los riesgos asociados a fenómenos naturales. Este geoportal busca ser
-        un puente entre el conocimiento técnico y las necesidades de los tomadores de decisiones, académicos,
-        organizaciones y la ciudadanía en general.
+        El ordenamiento territorial es una herramienta esencial para gestionar
+        los recursos naturales, planificar el crecimiento urbano y rural, y
+        minimizar los riesgos asociados a fenómenos naturales. Este geoportal
+        busca ser un puente entre el conocimiento técnico y las necesidades de
+        los tomadores de decisiones, académicos, organizaciones y la ciudadanía
+        en general.
       </p>
       <p>
-        Explora las secciones disponibles y descubre cómo esta herramienta puede ayudarte a entender y contribuir al
-        desarrollo equilibrado de Hidalgo.
+        Explora las secciones disponibles y descubre cómo esta herramienta puede
+        ayudarte a entender y contribuir al desarrollo equilibrado de Hidalgo.
       </p>
     </div>
   </section>
-  <section style="background-color: #f1f5f9; padding: 2rem;">
-    <header style="text-align: center; padding: 2rem 0;">
-      <h2 style="font-size: 2rem; color: #007bff;">Conozca más sobre Hidalgo</h2>
+  <section style="background-color: #f1f5f9; padding: 2rem">
+    <header style="text-align: center; padding: 2rem 0">
+      <h2 style="font-size: 2rem; color: #007bff">Conozca más sobre Hidalgo</h2>
       <p>Información detallada sobre el estado de Hidalgo.</p>
     </header>
-  
+
     <!-- Medio físico natural -->
-    <section style="margin-top: 2rem; text-align: center;">
-      <h3 style="font-size: 1.75rem; color: #212529;">Medio físico natural</h3>
-      <p>Características del relieve, tipos de suelo, recursos hídricos y otros aspectos relevantes</p>
-  
-      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
+    <section style="margin-top: 2rem; text-align: center">
+      <h3 style="font-size: 1.75rem; color: #212529">Medio físico natural</h3>
+      <p>
+        Características del relieve, tipos de suelo, recursos hídricos y otros
+        aspectos relevantes
+      </p>
+
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          justify-content: center;
+          margin-top: 2rem;
+        "
+      >
         <!-- Ubicación -->
-        <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-          <img src="assets/ubicacion.jpg" alt="Ubicación" style="width: 100%; border-radius: 8px;" />
-          <h4 style="color: #007bff; margin-top: 1rem;">Ubicación</h4>
+        <div
+          style="
+            max-width: 400px;
+            text-align: left;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="src/assets/images/image40.png"
+            alt="Ubicación"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h4 style="color: #007bff; margin-top: 1rem">Ubicación</h4>
           <p>
-            Hidalgo está ubicado en la región central de México, conocido por su diversidad fisiográfica, la cual incluye sierras, planicies y valles. Se encuentra entre las coordenadas 19°36' y 21°24' de latitud norte, y entre 98°26' y 99°53' de longitud oeste. Su extensión territorial es de aproximadamente 20.900 kilómetros cuadrados, lo cual representa el 1,1% del territorio nacional. Limita al norte con los estados de San Luis Potosí y Veracruz; al este, con Puebla; al sur, con Tlaxcala y el Estado de México; y al oeste, con Querétaro.
+            Hidalgo está ubicado en la región central de México, conocido por su
+            diversidad fisiográfica, la cual incluye sierras, planicies y
+            valles. Se encuentra entre las coordenadas 19°36' y 21°24' de
+            latitud norte, y entre 98°26' y 99°53' de longitud oeste. Su
+            extensión territorial es de aproximadamente 20.900 kilómetros
+            cuadrados, lo cual representa el 1,1% del territorio nacional.
+            Limita al norte con los estados de San Luis Potosí y Veracruz; al
+            este, con Puebla; al sur, con Tlaxcala y el Estado de México; y al
+            oeste, con Querétaro.
           </p>
         </div>
-  
+
         <!-- Topoformas -->
-        <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-          <img src="assets/topoformas.jpg" alt="Topoformas" style="width: 100%; border-radius: 8px;" />
-          <h4 style="color: #007bff; margin-top: 1rem;">Topoformas</h4>
+        <div
+          style="
+            max-width: 400px;
+            text-align: left;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="src/assets/images/valle del mezquital.jpeg"
+            alt="Topoformas"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h4 style="color: #007bff; margin-top: 1rem">Topoformas</h4>
           <p>
-            El relieve en el estado es muy variado debido a la presencia de montañas, sierras, planicies y valles. Predominan sierras altas en la región oriental y planicies en El Valle del Mezquital; las elevaciones más notables son los cerros de las Navajas y La pañuela.  Las pendientes en el estado varían, con áreas montañosas que presentan inclinaciones abruptas y planicies que tienen pendientes menores, favoreciendo actividades agrícolas y de asentamiento humano en ciertas regiones.
+            El relieve en el estado es muy variado debido a la presencia de
+            montañas, sierras, planicies y valles. Predominan sierras altas en
+            la región oriental y planicies en El Valle del Mezquital; las
+            elevaciones más notables son los cerros de las Navajas y La pañuela.
+            Las pendientes en el estado varían, con áreas montañosas que
+            presentan inclinaciones abruptas y planicies que tienen pendientes
+            menores, favoreciendo actividades agrícolas y de asentamiento humano
+            en ciertas regiones.
           </p>
         </div>
-  
+
         <!-- Provincias fisiográficas -->
-        <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-          <img src="assets/provincias.jpg" alt="Provincias fisiográficas" style="width: 100%; border-radius: 8px;" />
-          <h4 style="color: #007bff; margin-top: 1rem;">Provincias fisiográficas</h4>
+        <div
+          style="
+            max-width: 400px;
+            text-align: left;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="src/assets/images/Coatepec.jpeg"
+            alt="Provincias fisiográficas"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h4 style="color: #007bff; margin-top: 1rem">
+            Provincias fisiográficas
+          </h4>
           <p>
-            El estado de Hidalgo forma parte de dos provincias fisiográficas principales: la Sierra Madre Oriental y la Faja Volcánica Transmexicana también conocida como Eje Neovolcanico.
-
-Las subprovincias fisiográficas incluyen:
-
- 
-
-*Lomeríos: Con pendientes suaves a moderadas (entre 5% y 15% de pendiente). 
-
-*Carso: Caracterizado por irregularidades muy marcadas, las pendientes de un paisaje cárstico pueden ir desde moderadas hasta muy pronunciadas (entre 20% y 35% de pendiente)
-
-*Llanuras: Al ser grandes extensiones de terreno plano suelen tener valores muy bajos de pendiente, aproximadamente inferiores al 5%.
+            El estado de Hidalgo forma parte de dos provincias fisiográficas
+            principales: la Sierra Madre Oriental y la Faja Volcánica
+            Transmexicana también conocida como Eje Neovolcanico. Las
+            subprovincias fisiográficas incluyen: *Lomeríos: Con pendientes
+            suaves a moderadas (entre 5% y 15% de pendiente). *Carso:
+            Caracterizado por irregularidades muy marcadas, las pendientes de un
+            paisaje cárstico pueden ir desde moderadas hasta muy pronunciadas
+            (entre 20% y 35% de pendiente) *Llanuras: Al ser grandes extensiones
+            de terreno plano suelen tener valores muy bajos de pendiente,
+            aproximadamente inferiores al 5%.
           </p>
         </div>
       </div>
     </section>
-  
-    <!-- Hidrología -->
-    <section style="margin-top: 3rem; text-align: center;">
-      <h3 style="font-size: 1.75rem; color: #212529;">Hidrología</h3>
-      <p>
-        La hidrología del estado de Hidalgo se caracteriza por su diversidad, la variedad de climas y relieves que lo componen. El estado se encuentra
-        atravesado por múltiples cuerpos de agua que forman parte de tres principales regiones hidrológicas.
-      </p>
-  
-      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
-        <!-- Región del Pánuco -->
-        <div style="max-width: 300px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-          <img src="assets/panuco.jpg" alt="Región del Pánuco" style="width: 100%; border-radius: 8px;" />
-          <h4 style="color: #007bff; margin-top: 1rem;">Región del Pánuco</h4>
-          <p>
-            Es la más importante en términos de drenaje, cubriendo gran parte del estado.
 
-Incluye ríos como el Moctezuma, Amajac y Tula, que eventualmente desembocan en el Golfo de México. Esta región es significativa por la cantidad de agua que aporta a la agricultura y al uso urbano.
+    <!-- Hidrología -->
+    <section style="margin-top: 3rem; text-align: center">
+      <h3 style="font-size: 1.75rem; color: #212529">Hidrología</h3>
+      <p>
+        La hidrología del estado de Hidalgo se caracteriza por su diversidad, la
+        variedad de climas y relieves que lo componen. El estado se encuentra
+        atravesado por múltiples cuerpos de agua que forman parte de tres
+        principales regiones hidrológicas.
+      </p>
+
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          justify-content: center;
+          margin-top: 2rem;
+        "
+      >
+        <!-- Región del Pánuco -->
+        <div
+          style="
+            max-width: 300px;
+            text-align: left;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="src/assets/images/region panuco.jpeg"
+            alt="Región del Pánuco"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h4 style="color: #007bff; margin-top: 1rem">Región del Pánuco</h4>
+          <p>
+            Es la más importante en términos de drenaje, cubriendo gran parte
+            del estado. Incluye ríos como el Moctezuma, Amajac y Tula, que
+            eventualmente desembocan en el Golfo de México. Esta región es
+            significativa por la cantidad de agua que aporta a la agricultura y
+            al uso urbano.
           </p>
         </div>
-  
+
         <!-- Región del Lerma-Santiago -->
-        <div style="max-width: 300px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-          <img src="assets/lerma-santiago.jpg" alt="Región del Lerma-Santiago" style="width: 100%; border-radius: 8px;" />
-          <h4 style="color: #007bff; margin-top: 1rem;">Región del Lerma-Santiago</h4>
+        <div
+          style="
+            max-width: 300px;
+            text-align: left;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="src/assets/images/Rio lerma-santiago.jpeg"
+            alt="Región del Lerma-Santiago"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h4 style="color: #007bff; margin-top: 1rem">
+            Región del Lerma-Santiago
+          </h4>
           <p>
-            Cubre el extremo sur del estado y alimenta al río Lerma, uno de los más importantes de México. Esta región tiene un impacto más limitado en Hidalgo, pero es clave para la conexión hidrológica con otras entidades.          </p>
+            Cubre el extremo sur del estado y alimenta al río Lerma, uno de los
+            más importantes de México. Esta región tiene un impacto más limitado
+            en Hidalgo, pero es clave para la conexión hidrológica con otras
+            entidades.
+          </p>
         </div>
-  
+
         <!-- Región del Valle de México -->
-        <div style="max-width: 300px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-          <img src="assets/valle-mexico.jpg" alt="Región del Valle de México" style="width: 100%; border-radius: 8px;" />
-          <h4 style="color: #007bff; margin-top: 1rem;">Región del Valle de México</h4>
+        <div
+          style="
+            max-width: 300px;
+            text-align: left;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="src/assets/images/región del valle de mexico.jpeg"
+            alt="Región del Valle de México"
+            style="width: 100%; border-radius: 8px"
+          />
+          <h4 style="color: #007bff; margin-top: 1rem">
+            Región del Valle de México
+          </h4>
           <p>
-            Representa una pequeña porción del estado, donde se encuentran algunos sistemas de captación relacionados con la Ciudad de México.          </p>
+            Representa una pequeña porción del estado, donde se encuentran
+            algunos sistemas de captación relacionados con la Ciudad de México.
+          </p>
         </div>
       </div>
-  
-      <div style="margin-top: 2rem; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <h4 style="color: #007bff; margin-bottom: 1rem;">Principales cuerpos de agua</h4>
+
+      <div
+        style="
+          margin-top: 2rem;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <h4 style="color: #007bff; margin-bottom: 1rem">
+          Principales cuerpos de agua
+        </h4>
         <ul>
-          <li>Ríos : Además de los mencionados, destacan el río Actopan y el río Metztitlán, ambos importantes para la actividad agrícola y el turismo.</li>
-          <li>Lagos y presas : Hidalgo cuenta con varias presas significativas, como la presa Requena y la presa Endhó, utilizadas para riego y suministro de agua potable.</li>
-          <li>Cuerpos subterráneos : La geología del estado favorece la existencia de acuíferos que abastecen diversas localidades rurales y urbanas.</li>
+          <li>
+            Ríos : Además de los mencionados, destacan el río Actopan y el río
+            Metztitlán, ambos importantes para la actividad agrícola y el
+            turismo.
+          </li>
+          <li>
+            Lagos y presas : Hidalgo cuenta con varias presas significativas,
+            como la presa Requena y la presa Endhó, utilizadas para riego y
+            suministro de agua potable.
+          </li>
+          <li>
+            Cuerpos subterráneos : La geología del estado favorece la existencia
+            de acuíferos que abastecen diversas localidades rurales y urbanas.
+          </li>
         </ul>
-  
-        <h4 style="color: #dc3545; margin-top: 2rem;">Problemas y desafíos</h4>
+
+        <h4 style="color: #dc3545; margin-top: 2rem">Problemas y desafíos</h4>
         <ul>
           <li>Contaminación: Por descargas residuales no tratadas.</li>
-          <li>Escasez en áreas áridas, especialmente durante la temporada seca.</li>
+          <li>
+            Escasez en áreas áridas, especialmente durante la temporada seca.
+          </li>
         </ul>
       </div>
     </section>
   </section>
-  <section style="background-color: #f1f5f9; padding: 2rem;">
+  <section style="background-color: #f1f5f9; padding: 2rem">
     <!-- Uso de suelo y vegetación -->
-    <header style="text-align: center; margin-bottom: 2rem;">
-      <h2 style="font-size: 2rem; color: #007bff;">Uso de suelo y vegetación</h2>
+    <header style="text-align: center; margin-bottom: 2rem">
+      <h2 style="font-size: 2rem; color: #007bff">Uso de suelo y vegetación</h2>
       <p>
-        Los usos de suelo y vegetación son conceptos clave en la gestión del territorio, el ordenamiento ambiental y el desarrollo sostenible. Se refieren
-        a la manera en que el terreno es empleado y a las coberturas vegetales que predominan en un área determinada.
+        Los usos de suelo y vegetación son conceptos clave en la gestión del
+        territorio, el ordenamiento ambiental y el desarrollo sostenible. Se
+        refieren a la manera en que el terreno es empleado y a las coberturas
+        vegetales que predominan en un área determinada.
       </p>
     </header>
-  
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
+
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-top: 2rem;
+      "
+    >
       <!-- Clasificación del uso de suelo -->
-      <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/uso-suelo.jpg" alt="Uso de suelo y vegetación" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #007bff; margin-top: 1rem;">Clasificaciones</h4>
+      <div
+        style="
+          max-width: 400px;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image4.png"
+          alt="Uso de suelo y vegetación"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #007bff; margin-top: 1rem">Clasificaciones</h4>
         <p>
-          El estado de Hidalgo tiene numerosos usos de suelo y vegetación, clasificados y enumerados según las series de uso de suelo y vegetación
-          proporcionadas por INEGI, correspondientes a los años 2013 al 2021 (series V, VI y VII).
+          El estado de Hidalgo tiene numerosos usos de suelo y vegetación,
+          clasificados y enumerados según las series de uso de suelo y
+          vegetación proporcionadas por INEGI, correspondientes a los años 2013
+          al 2021 (series V, VI y VII).
         </p>
       </div>
-  
+
       <!-- Tipos de vegetación -->
-      <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/vegetacion.jpg" alt="Tipos de vegetación" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #007bff; margin-top: 1rem;">Tipos de vegetación</h4>
+      <div
+        style="
+          max-width: 400px;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/las series INEGI.jpeg"
+          alt="Tipos de vegetación"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #007bff; margin-top: 1rem">Tipos de vegetación</h4>
         <p>
-          Las series INEGI incluyen numerosas clasificaciones de uso de suelo y vegetación, agrupadas en 8 categorías: agricultura, cuerpos de agua,
-          bosques, matorral, pastizal, selva, sin vegetación y vegetación secundaria.
+          Las series INEGI incluyen numerosas clasificaciones de uso de suelo y
+          vegetación, agrupadas en 8 categorías: agricultura, cuerpos de agua,
+          bosques, matorral, pastizal, selva, sin vegetación y vegetación
+          secundaria.
         </p>
       </div>
     </div>
   </section>
-  
-  <section style="background-color: #ffffff; padding: 2rem; margin-top: 3rem;">
+
+  <section style="background-color: #ffffff; padding: 2rem; margin-top: 3rem">
     <!-- Estadísticas de población -->
-    <header style="text-align: center; margin-bottom: 2rem;">
-      <h2 style="font-size: 2rem; color: #007bff;">Estadísticas de Población</h2>
+    <header style="text-align: center; margin-bottom: 2rem">
+      <h2 style="font-size: 2rem; color: #007bff">Estadísticas de Población</h2>
       <p>
-        Información detallada sobre la población en Hidalgo, abarcando análisis demográficos y tendencias relevantes.
+        Información detallada sobre la población en Hidalgo, abarcando análisis
+        demográficos y tendencias relevantes.
       </p>
     </header>
-  
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      "
+    >
       <!-- Escolaridad y Analfabetismo -->
-      <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/escolaridad.jpg" alt="Escolaridad y Analfabetismo" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #007bff; margin-top: 1rem;">Escolaridad y Analfabetismo</h4>
+      <div
+        style="
+          max-width: 400px;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/escolaridad y analfabetismo.jpeg"
+          alt="Escolaridad y Analfabetismo"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #007bff; margin-top: 1rem">
+          Escolaridad y Analfabetismo
+        </h4>
         <p>
-          La educación funge como pilar fundamental en el desarrollo de las sociedades y constituye un derecho humano esencial para el bienestar y la
-          equidad. En Hidalgo, la tasa de analfabetismo en mayores de 15 años es del 6.2%.
+          La educación funge como pilar fundamental en el desarrollo de las
+          sociedades y constituye un derecho humano esencial para el bienestar y
+          la equidad. En Hidalgo, la tasa de analfabetismo en mayores de 15 años
+          es del 6.2%.
         </p>
       </div>
-  
+
       <!-- Tasa de deserción escolar -->
-      <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/desercion.jpg" alt="Tasa de deserción escolar" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #007bff; margin-top: 1rem;">Tasa de deserción escolar</h4>
+      <div
+        style="
+          max-width: 400px;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/Tasa de desercion escoalr.jpeg"
+          alt="Tasa de deserción escolar"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #007bff; margin-top: 1rem">
+          Tasa de deserción escolar
+        </h4>
         <p>
-          La tasa de abandono escolar en el nivel medio superior es del 11.7%, reflejando la necesidad de fortalecer los programas educativos para
+          La tasa de abandono escolar en el nivel medio superior es del 11.7%,
+          reflejando la necesidad de fortalecer los programas educativos para
           aumentar la cobertura y mejorar las oportunidades laborales.
         </p>
       </div>
     </div>
   </section>
-  
-  <section style="background-color: #f8f9fa; padding: 2rem; margin-top: 3rem;">
+
+  <section style="background-color: #f8f9fa; padding: 2rem; margin-top: 3rem">
     <!-- Pobreza, Marginación, Equidad e Inclusión -->
-    <header style="text-align: center; margin-bottom: 2rem;">
-      <h2 style="font-size: 2rem; color: #007bff;">Pobreza, Marginación, Equidad e Inclusión en Hidalgo</h2>
+    <header style="text-align: center; margin-bottom: 2rem">
+      <h2 style="font-size: 2rem; color: #007bff">
+        Pobreza, Marginación, Equidad e Inclusión en Hidalgo
+      </h2>
     </header>
-  
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      "
+    >
       <!-- Índices de pobreza -->
-      <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/pobreza.jpg" alt="Índices de pobreza" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #007bff; margin-top: 1rem;">Índices de pobreza</h4>
+      <div
+        style="
+          max-width: 400px;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/pobreza.jpeg"
+          alt="Índices de pobreza"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #007bff; margin-top: 1rem">Índices de pobreza</h4>
         <p>
-          Hidalgo tiene altos índices de pobreza, con el 50% de los municipios con un porcentaje igual o menor al 50.2%. Las principales afectaciones
+          Hidalgo tiene altos índices de pobreza, con el 50% de los municipios
+          con un porcentaje igual o menor al 50.2%. Las principales afectaciones
           se encuentran en áreas rurales e indígenas.
         </p>
       </div>
-  
+
       <!-- Marginación e inclusión -->
-      <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/marginacion.jpg" alt="Marginación e inclusión" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #007bff; margin-top: 1rem;">Marginación e inclusión</h4>
+      <div
+        style="
+          max-width: 400px;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/equidad.jpg"
+          alt="Marginación e inclusión"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #007bff; margin-top: 1rem">
+          Marginación e inclusión
+        </h4>
         <p>
-          La marginación afecta principalmente a municipios como San Bartolo Tutotepec y Huejutla de Reyes, donde se concentran carencias en educación,
-          salud y servicios básicos.
+          La marginación afecta principalmente a municipios como San Bartolo
+          Tutotepec y Huejutla de Reyes, donde se concentran carencias en
+          educación, salud y servicios básicos.
         </p>
       </div>
-  
+
       <!-- Equidad de género -->
-      <div style="max-width: 400px; text-align: left; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/equidad-genero.jpg" alt="Equidad de género" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #007bff; margin-top: 1rem;">Equidad de género</h4>
+      <div
+        style="
+          max-width: 400px;
+          text-align: left;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/igualdad.jpg"
+          alt="Equidad de género"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #007bff; margin-top: 1rem">Equidad de género</h4>
         <p>
-          Hidalgo enfrenta desafíos en la equidad de género, especialmente en áreas rurales e indígenas, con brechas salariales y problemas de violencia
-          de género entre los principales retos.
+          Hidalgo enfrenta desafíos en la equidad de género, especialmente en
+          áreas rurales e indígenas, con brechas salariales y problemas de
+          violencia de género entre los principales retos.
         </p>
       </div>
     </div>
   </section>
-  <section style="background-color: #f9fafb; padding: 2rem;">
+  <section style="background-color: #f9fafb; padding: 2rem">
     <!-- Encabezado principal -->
-    <header style="text-align: center; margin-bottom: 2rem;">
-      <h2 style="font-size: 2.5rem; color: #007bff;">Explora Hidalgo a través de sus mapas</h2>
+    <header style="text-align: center; margin-bottom: 2rem">
+      <h2 style="font-size: 2.5rem; color: #007bff">
+        Explora Hidalgo a través de sus mapas
+      </h2>
       <p>
-        En esta sección encontrarás una colección de mapas que te permitirán conocer y analizar diferentes aspectos del estado de Hidalgo.
+        En esta sección encontrarás una colección de mapas que te permitirán
+        conocer y analizar diferentes aspectos del estado de Hidalgo.
       </p>
     </header>
-  
+
     <!-- Grid de apartados -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      "
+    >
       <!-- Mapa de ubicación -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/mapa-ubicacion.jpg" alt="Mapa de ubicación" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Mapa de ubicación</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image40.png"
+          alt="Mapa de ubicación"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Mapa de ubicación</h4>
         <p>
-          Permite identificar la posición geográfica de Hidalgo dentro del territorio nacional y su relación con los estados vecinos.
+          Permite identificar la posición geográfica de Hidalgo dentro del
+          territorio nacional y su relación con los estados vecinos.
         </p>
       </div>
-  
+
       <!-- Unidades de Gestión Ambiental -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/unidades-gestion.jpg" alt="Unidades de Gestión Ambiental" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Unidades de Gestión Ambiental</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image41.jpg"
+          alt="Unidades de Gestión Ambiental"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Unidades de Gestión Ambiental
+        </h4>
         <p>
-          Identifican áreas prioritarias para la conservación, restauración y desarrollo sustentable del estado.
+          Identifican áreas prioritarias para la conservación, restauración y
+          desarrollo sustentable del estado.
         </p>
       </div>
-  
+
       <!-- Seguridad Social, Escolaridad y Analfabetismo -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/seguridad-social.jpg" alt="Seguridad Social" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Seguridad Social, Escolaridad y Analfabetismo</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image12.jpg"
+          alt="Seguridad Social"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Seguridad Social, Escolaridad y Analfabetismo
+        </h4>
         <p>
-          Describe las brechas educativas y de seguridad social en el estado, destacando desigualdades entre regiones.
+          Describe las brechas educativas y de seguridad social en el estado,
+          destacando desigualdades entre regiones.
         </p>
       </div>
-  
+      <!-- Población de 15 años o mas alfabeta y analfabeta -->
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image28.jpg"
+          alt="Seguridad Social"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Población de 15 años o mas alfabeta y analfabeta
+        </h4>
+        <p>
+          Este análisis describe la distribución de la población de 15 años o
+          más en el estado de Hidalgo.
+        </p>
+      </div>
+      <!-- Seguridad social -->
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image3.png"
+          alt="Seguridad Social"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Seguridad sociala</h4>
+        <p>
+          Este análisis permite identificar áreas prioritarias para mejorar la
+          protección social de los habitantes.
+        </p>
+      </div>
+
       <!-- Provincias Fisiográficas -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/provincias.jpg" alt="Provincias Fisiográficas" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Provincias Fisiográficas</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image31.png"
+          alt="Provincias Fisiográficas"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Provincias Fisiográficas
+        </h4>
         <p>
-          Muestra la diversidad geográfica del estado con zonas montañosas, llanuras, valles y áreas de transición.
+          Muestra la diversidad geográfica del estado con zonas montañosas,
+          llanuras, valles y áreas de transición.
         </p>
       </div>
-  
+
       <!-- Subprovincias Fisiográficas -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/subprovincias.jpg" alt="Subprovincias Fisiográficas" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Subprovincias Fisiográficas</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image36.png"
+          alt="Subprovincias Fisiográficas"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Subprovincias Fisiográficas
+        </h4>
         <p>
-          Representan unidades geográficas específicas, destacando características topográficas y climáticas.
+          Representan unidades geográficas específicas, destacando
+          características topográficas y climáticas.
         </p>
       </div>
-  
+
       <!-- Probabilidad de Riesgos -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/riesgos.jpg" alt="Probabilidad de Riesgos" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Probabilidad de Riesgos</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image20.png"
+          alt="Probabilidad de Riesgos"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Probabilidad de Riesgos
+        </h4>
         <p>
-          Analiza riesgos naturales, como inundaciones y deslizamientos de tierra, derivados de la geografía y el clima.
+          Analiza riesgos naturales, como inundaciones y deslizamientos de
+          tierra, derivados de la geografía y el clima.
         </p>
       </div>
-  
+
       <!-- Riesgo de Inundaciones -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/inundaciones.jpg" alt="Riesgo de Inundaciones" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Riesgo de Inundaciones</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image11.png"
+          alt="Riesgo de Inundaciones"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Riesgo de Inundaciones</h4>
         <p>
-          Muestra las áreas propensas a inundaciones basadas en datos históricos y cercanía a ríos y presas.
+          Muestra las áreas propensas a inundaciones basadas en datos históricos
+          y cercanía a ríos y presas.
         </p>
       </div>
-  
+
       <!-- Pendientes -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/pendientes.jpg" alt="Pendientes" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Pendientes</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image27.png"
+          alt="Pendientes"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Pendientes</h4>
         <p>
-          Describe la distribución de pendientes y formas del relieve, esenciales para el ordenamiento territorial.
+          Describe la distribución de pendientes y formas del relieve,
+          esenciales para el ordenamiento territorial.
         </p>
       </div>
-  
+
       <!-- Panorama de Pobreza -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/pobreza.jpg" alt="Panorama de Pobreza" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Panorama de Pobreza</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image18.png"
+          alt="Panorama de Pobreza"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Panorama de Pobreza</h4>
         <p>
-          Analiza las desigualdades socioeconómicas en regiones urbanas, semiurbanas y rurales del estado.
+          Analiza las desigualdades socioeconómicas en regiones urbanas,
+          semiurbanas y rurales del estado.
         </p>
       </div>
-  
+
       <!-- Institutos Gubernamentales -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/institutos.jpg" alt="Institutos Gubernamentales" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Institutos Gubernamentales</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image9.png"
+          alt="Institutos Gubernamentales"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Institutos Gubernamentales
+        </h4>
         <p>
-          Muestra la ubicación de instituciones clave que coordinan programas contra la pobreza y marginación.
+          Muestra la ubicación de instituciones clave que coordinan programas
+          contra la pobreza y marginación.
         </p>
       </div>
-  
+
       <!-- Uso de suelo y vegetación -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/uso-suelo.jpg" alt="Uso de Suelo y Vegetación" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Uso de Suelo y Vegetación</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image44.png"
+          alt="Uso de Suelo y Vegetación"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Uso de Suelo y Vegetación
+        </h4>
         <p>
-          Representa áreas destinadas a agricultura, desarrollo urbano y zonas naturales como bosques y matorrales.
+          Representa áreas destinadas a agricultura, desarrollo urbano y zonas
+          naturales como bosques y matorrales.
         </p>
       </div>
-  
+
       <!-- Cambios de Vegetación -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/cambios-vegetacion.jpg" alt="Cambios de Vegetación" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Cambios de Vegetación</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image4.png"
+          alt="Cambios de Vegetación"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Cambios de Vegetación</h4>
         <p>
-          Evalúa los impactos del desarrollo humano y el cambio climático en la biodiversidad de la región.
+          Evalúa los impactos del desarrollo humano y el cambio climático en la
+          biodiversidad de la región.
         </p>
       </div>
-  
+
       <!-- Clasificación de Uso de Suelo -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/clasificacion-suelo.jpg" alt="Clasificación de Uso de Suelo" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Clasificación de Uso de Suelo</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image49.png"
+          alt="Clasificación de Uso de Suelo"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Clasificación de Uso de Suelo
+        </h4>
         <p>
-          Destaca áreas agrícolas, vegetación secundaria y otras clasificaciones fundamentales para la dinámica ecológica.
+          Destaca áreas agrícolas, vegetación secundaria y otras clasificaciones
+          fundamentales para la dinámica ecológica.
         </p>
       </div>
-  
+
       <!-- Cambios de Cobertura -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/cobertura.jpg" alt="Cambios de Cobertura" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Cambios de Cobertura</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image35.png"
+          alt="Cambios de Cobertura"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Cambios de Cobertura</h4>
         <p>
-          Analiza áreas protegidas y los impactos del cambio en la cobertura en la biodiversidad del estado.
+          Analiza áreas protegidas y los impactos del cambio en la cobertura en
+          la biodiversidad del estado.
         </p>
       </div>
-  
+
       <!-- Población -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/poblacion.jpg" alt="Población" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Población</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image46.png"
+          alt="Población"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Población</h4>
         <p>
-          Examina las características demográficas y la distribución geográfica de la población en Hidalgo.
+          Examina las características demográficas y la distribución geográfica
+          de la población en Hidalgo.
         </p>
       </div>
-  
+
       <!-- Vulnerabilidad Social -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/vulnerabilidad.jpg" alt="Vulnerabilidad Social" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Vulnerabilidad Social</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/image34.png"
+          alt="Vulnerabilidad Social"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Vulnerabilidad Social</h4>
         <p>
-          Explora estadísticas y factores que reflejan las dimensiones de vulnerabilidad en Hidalgo.
+          Explora estadísticas y factores que reflejan las dimensiones de
+          vulnerabilidad en Hidalgo.
         </p>
       </div>
     </div>
   </section>
-  <section style="background-color: #f2f2f2; padding: 2rem;">
-    <h2 style="text-align: center; font-size: 2rem; color: #2c3e50; margin-bottom: 1.5rem;">Marco Normativo</h2>
-    <p style="text-align: center; color: #34495e; font-size: 1rem; max-width: 800px; margin: 0 auto 2rem;">
-      Normativas e instrumentos de planeación: El ordenamiento territorial en el estado de Hidalgo se encuentra regulado por un marco normativo que incluye leyes, reglamentos, disposiciones federales, estatales y municipales. Estas normas están diseñadas para promover el desarrollo equilibrado, el uso sustentable del territorio y la conservación del medio ambiente.
+  <section style="background-color: #f2f2f2; padding: 2rem">
+    <h2
+      style="
+        text-align: center;
+        font-size: 2rem;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+      "
+    >
+      Marco Normativo
+    </h2>
+    <p
+      style="
+        text-align: center;
+        color: #34495e;
+        font-size: 1rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+      "
+    >
+      Normativas e instrumentos de planeación: El ordenamiento territorial en el
+      estado de Hidalgo se encuentra regulado por un marco normativo que incluye
+      leyes, reglamentos, disposiciones federales, estatales y municipales.
+      Estas normas están diseñadas para promover el desarrollo equilibrado, el
+      uso sustentable del territorio y la conservación del medio ambiente.
     </p>
-  
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-  
+
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      "
+    >
       <!-- Normatividad General -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/normatividad-general.jpg" alt="Normatividad General" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Normatividad General</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/normativas.jpeg"
+          alt="Normatividad General"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Normatividad General</h4>
         <ul>
-          <li>Ley General de Asentamientos Humanos, Ordenamiento Territorial y Desarrollo Urbano.</li>
-          <li>Ley General del Equilibrio Ecológico y la Protección al Ambiente (LGEEPA):</li>
+          <li>
+            Ley General de Asentamientos Humanos, Ordenamiento Territorial y
+            Desarrollo Urbano.
+          </li>
+          <li>
+            Ley General del Equilibrio Ecológico y la Protección al Ambiente
+            (LGEEPA):
+          </li>
           <ul>
-            <li>Artículo 62 del Reglamento en materia de Ordenamiento Ecológico.</li>
+            <li>
+              Artículo 62 del Reglamento en materia de Ordenamiento Ecológico.
+            </li>
             <li>Título Tercero Bis de Ordenamiento Ecológico.</li>
             <li>Capítulo IV sobre Áreas Naturales Protegidas.</li>
           </ul>
@@ -575,168 +1171,509 @@ Incluye ríos como el Moctezuma, Amajac y Tula, que eventualmente desembocan en 
           </ul>
         </ul>
       </div>
-  
+
       <!-- Normatividad Estatal -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/normatividad-estatal.jpg" alt="Normatividad Estatal" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Normatividad Estatal</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/construcción.jpeg"
+          alt="Normatividad Estatal"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">Normatividad Estatal</h4>
         <ul>
-          <li>Ley de Asentamientos Humanos, Desarrollo Urbano y Ordenamiento Territorial del Estado de Hidalgo.</li>
+          <li>
+            Ley de Asentamientos Humanos, Desarrollo Urbano y Ordenamiento
+            Territorial del Estado de Hidalgo.
+          </li>
           <li>Ley de Protección al Ambiente del Estado de Hidalgo.</li>
           <li>Ley de Planeación de Desarrollo del Estado de Hidalgo.</li>
-          <li>Ley de Obras Públicas y Servicios Relacionados del Estado de Hidalgo.</li>
+          <li>
+            Ley de Obras Públicas y Servicios Relacionados del Estado de
+            Hidalgo.
+          </li>
           <li>Ley de Vivienda del Estado de Hidalgo.</li>
           <li>Código Urbano del Estado de Hidalgo.</li>
         </ul>
       </div>
-  
+
       <!-- Instrumentos de Planeación -->
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img src="assets/instrumentos-planeacion.jpg" alt="Instrumentos de Planeación" style="width: 100%; border-radius: 8px;" />
-        <h4 style="color: #3498db; margin-top: 1rem;">Instrumentos de Planeación</h4>
+      <div
+        style="
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <img
+          src="src/assets/images/instrumentos de planeacion.jpeg"
+          alt="Instrumentos de Planeación"
+          style="width: 100%; border-radius: 8px"
+        />
+        <h4 style="color: #3498db; margin-top: 1rem">
+          Instrumentos de Planeación
+        </h4>
         <ul>
-          <li>Programa Estatal de Ordenamiento Territorial y Desarrollo Urbano.</li>
+          <li>
+            Programa Estatal de Ordenamiento Territorial y Desarrollo Urbano.
+          </li>
           <li>Programas Municipales de Ordenamiento Territorial.</li>
           <li>Ordenamientos Ecológicos Locales y Regionales.</li>
         </ul>
       </div>
-  
     </div>
   </section>
   <section id="marco-normativo">
     <!-- Información Adicional -->
-    <div style="background-color: white; padding: 1.5rem; margin-top: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-      <h3 style="color: #2c3e50; text-align: center;">Marco Normativo</h3>
-      <p style="color: #34495e; text-align: justify; margin-top: 1rem;">
+    <div
+      style="
+        background-color: white;
+        padding: 1.5rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h3 style="color: #2c3e50; text-align: center">Marco Normativo</h3>
+      <p style="color: #34495e; text-align: justify; margin-top: 1rem">
         Información espacial al servicio del desarrollo sostenible en Hidalgo.
       </p>
-  
-      <h4>1. Ley General del Equilibrio Ecológico y la Protección al Ambiente (LGEEPA):</h4>
-      <p><strong>Artículo 62 del Reglamento en materia de Ordenamiento Ecológico:</strong></p>
+
+      <h4>
+        1. Ley General del Equilibrio Ecológico y la Protección al Ambiente
+        (LGEEPA):
+      </h4>
+      <p>
+        <strong
+          >Artículo 62 del Reglamento en materia de Ordenamiento
+          Ecológico:</strong
+        >
+      </p>
       <ul>
-        <li>Define la obligación de utilizar el Subsistema de Información para el Ordenamiento Ecológico (SIORE) como parte de los programas de ordenamiento ecológico.</li>
-        <li>Este sistema da acceso público y transparencia en los datos relacionados con los planes de manejo ambiental.</li>
-        <li>Apoya la creación de Unidades de Gestión Ambiental (UGAs) como herramienta fundamental para asignar políticas, lineamientos y estrategias ecológicas al estado de Hidalgo.</li>
+        <li>
+          Define la obligación de utilizar el Subsistema de Información para el
+          Ordenamiento Ecológico (SIORE) como parte de los programas de
+          ordenamiento ecológico.
+        </li>
+        <li>
+          Este sistema da acceso público y transparencia en los datos
+          relacionados con los planes de manejo ambiental.
+        </li>
+        <li>
+          Apoya la creación de Unidades de Gestión Ambiental (UGAs) como
+          herramienta fundamental para asignar políticas, lineamientos y
+          estrategias ecológicas al estado de Hidalgo.
+        </li>
       </ul>
       <p><strong>Título Tercero Bis de Ordenamiento Ecológico:</strong></p>
       <ul>
-        <li>Establece los principios y lineamientos para el ordenamiento ecológico del territorio, asegurando el equilibrio entre el uso del suelo y la protección del medio ambiente.</li>
-        <li>Influye en las estrategias de distribución del uso del suelo y la vegetación, así como en la gestión de riesgos ecológicos.</li>
+        <li>
+          Establece los principios y lineamientos para el ordenamiento ecológico
+          del territorio, asegurando el equilibrio entre el uso del suelo y la
+          protección del medio ambiente.
+        </li>
+        <li>
+          Influye en las estrategias de distribución del uso del suelo y la
+          vegetación, así como en la gestión de riesgos ecológicos.
+        </li>
       </ul>
       <p><strong>Capítulo IV sobre Áreas Naturales Protegidas:</strong></p>
       <ul>
-        <li>Regula la creación, uso y manejo de Áreas Naturales Protegidas (ANPs), como las presentes en Hidalgo: la Reserva de la Biosfera Barranca de Metztitlán, el Parque Nacional El Chico, y Los Mármoles.</li>
-        <li>Define restricciones específicas para actividades humanas en estas áreas, afectando las recomendaciones para uso del suelo en zonas ecológicamente sensibles.</li>
+        <li>
+          Regula la creación, uso y manejo de Áreas Naturales Protegidas (ANPs),
+          como las presentes en Hidalgo: la Reserva de la Biosfera Barranca de
+          Metztitlán, el Parque Nacional El Chico, y Los Mármoles.
+        </li>
+        <li>
+          Define restricciones específicas para actividades humanas en estas
+          áreas, afectando las recomendaciones para uso del suelo en zonas
+          ecológicamente sensibles.
+        </li>
       </ul>
-  
+
       <h4>2. Norma Oficial Mexicana NOM-059-SEMARNAT-2010:</h4>
       <ul>
         <li>Protección de especies nativas de flora y fauna silvestres.</li>
-        <li>Clasifica especies en peligro de extinción, amenazadas, sujetas a protección especial o en peligro crítico. Incluye vegetación clave como bosques de encino, selvas bajas caducifolias y bosques mesófilos.</li>
-        <li>Influye en las decisiones sobre restauración ecológica y conservación en Sitios de Prioridad para la Conservación y Restauración (SPR y SAP), al proteger ecosistemas clave en Hidalgo.</li>
+        <li>
+          Clasifica especies en peligro de extinción, amenazadas, sujetas a
+          protección especial o en peligro crítico. Incluye vegetación clave
+          como bosques de encino, selvas bajas caducifolias y bosques mesófilos.
+        </li>
+        <li>
+          Influye en las decisiones sobre restauración ecológica y conservación
+          en Sitios de Prioridad para la Conservación y Restauración (SPR y
+          SAP), al proteger ecosistemas clave en Hidalgo.
+        </li>
       </ul>
-  
-      <h4>3. Ley General de Asentamientos Humanos, Ordenamiento Territorial y Desarrollo Urbano:</h4>
+
+      <h4>
+        3. Ley General de Asentamientos Humanos, Ordenamiento Territorial y
+        Desarrollo Urbano:
+      </h4>
       <ul>
-        <li>Capítulo II sobre el Ordenamiento Territorial de los Asentamientos Humanos.</li>
-        <li>Establece lineamientos para el desarrollo sustentable urbano y rural, promoviendo un equilibrio en la distribución poblacional y en el acceso a infraestructura.</li>
-        <li>Artículo 41 sobre zonas de riesgo: Obliga a identificar y gestionar zonas con riesgos naturales (deslaves, inundaciones, sismos) para evitar afectaciones a la población.</li>
+        <li>
+          Capítulo II sobre el Ordenamiento Territorial de los Asentamientos
+          Humanos.
+        </li>
+        <li>
+          Establece lineamientos para el desarrollo sustentable urbano y rural,
+          promoviendo un equilibrio en la distribución poblacional y en el
+          acceso a infraestructura.
+        </li>
+        <li>
+          Artículo 41 sobre zonas de riesgo: Obliga a identificar y gestionar
+          zonas con riesgos naturales (deslaves, inundaciones, sismos) para
+          evitar afectaciones a la población.
+        </li>
       </ul>
-  
+
       <h4>4. Ley General de Educación:</h4>
       <ul>
         <li>Artículo 7 sobre equidad y calidad en la educación.</li>
-        <li>Busca garantizar que toda persona tenga acceso a una educación de calidad, con especial atención a poblaciones vulnerables en áreas rurales.</li>
-        <li>Artículo 43 sobre infraestructura educativa: Regula la planeación, construcción y mantenimiento de infraestructura escolar con base en criterios de equidad territorial.</li>
+        <li>
+          Busca garantizar que toda persona tenga acceso a una educación de
+          calidad, con especial atención a poblaciones vulnerables en áreas
+          rurales.
+        </li>
+        <li>
+          Artículo 43 sobre infraestructura educativa: Regula la planeación,
+          construcción y mantenimiento de infraestructura escolar con base en
+          criterios de equidad territorial.
+        </li>
       </ul>
-  
+
       <h4>5. Ley de Desarrollo Rural Sustentable:</h4>
       <ul>
-        <li>Capítulo III sobre Uso del Suelo Agrícola y Conservación de Recursos Naturales.</li>
-        <li>Promueve la utilización sostenible del suelo agrícola, el manejo forestal responsable y la protección de recursos hídricos en áreas rurales.</li>
+        <li>
+          Capítulo III sobre Uso del Suelo Agrícola y Conservación de Recursos
+          Naturales.
+        </li>
+        <li>
+          Promueve la utilización sostenible del suelo agrícola, el manejo
+          forestal responsable y la protección de recursos hídricos en áreas
+          rurales.
+        </li>
       </ul>
-  
+
       <h4>6. Normas y Políticas Ambientales Específicas:</h4>
       <ul>
-        <li><strong>NOM-015-SEMARNAT-2007:</strong> Regula actividades que impliquen deforestación o afecten áreas boscosas.</li>
-        <li><strong>NOM-001-SEMARNAT-1996:</strong> Regula las descargas en cuerpos de agua, protegiendo ríos y lagos como los presentes en Hidalgo.</li>
+        <li>
+          <strong>NOM-015-SEMARNAT-2007:</strong> Regula actividades que
+          impliquen deforestación o afecten áreas boscosas.
+        </li>
+        <li>
+          <strong>NOM-001-SEMARNAT-1996:</strong> Regula las descargas en
+          cuerpos de agua, protegiendo ríos y lagos como los presentes en
+          Hidalgo.
+        </li>
       </ul>
-  
+
       <h4>7. Reglamento de la Ley de Planeación:</h4>
       <ul>
-        <li>Capítulo V sobre Evaluación y Seguimiento: Establece la obligación de monitorear los avances en la implementación de planes de ordenamiento territorial.</li>
+        <li>
+          Capítulo V sobre Evaluación y Seguimiento: Establece la obligación de
+          monitorear los avances en la implementación de planes de ordenamiento
+          territorial.
+        </li>
       </ul>
-  
+
       <h4>8. Ley de Protección Civil:</h4>
       <ul>
-        <li>Capítulo sobre prevención de desastres naturales: Obliga a identificar zonas vulnerables y definir medidas para reducir riesgos en caso de fenómenos como inundaciones y deslaves.</li>
+        <li>
+          Capítulo sobre prevención de desastres naturales: Obliga a identificar
+          zonas vulnerables y definir medidas para reducir riesgos en caso de
+          fenómenos como inundaciones y deslaves.
+        </li>
       </ul>
-  
+
       <h4>9. Planes Estatales y Municipales de Desarrollo:</h4>
       <ul>
-        <li>Incluyen lineamientos específicos para el desarrollo de infraestructura, vivienda, y servicios en municipios.</li>
-        <li>Afecta la propuesta de acciones para el desarrollo equilibrado del estado.</li>
+        <li>
+          Incluyen lineamientos específicos para el desarrollo de
+          infraestructura, vivienda, y servicios en municipios.
+        </li>
+        <li>
+          Afecta la propuesta de acciones para el desarrollo equilibrado del
+          estado.
+        </li>
       </ul>
     </div>
   </section>
-  <section id="descargas" style="margin-top: 2rem; padding: 2rem; background-color: #f8f9fa; border-radius: 8px;">
-    <h3 style="text-align: center; color: #2c3e50; margin-bottom: 1rem;">Opciones de descarga</h3>
-    <p style="text-align: center; color: #34495e; margin-bottom: 2rem;">Descarga unificada de información relevante sobre el estado de Hidalgo.</p>
-  
-    <div style="margin-bottom: 1.5rem;">
-      <h4 style="color: #2c3e50;">Contenido del archivo ZIP:</h4>
-      <ul style="color: #34495e; line-height: 1.6;">
-        <li><strong>Información de pobreza, Marginación, Equidad e Inclusión:</strong> Incluye estadísticas detalladas y análisis relacionados con los índices de pobreza, marginación y desigualdad en el estado.</li>
-        <li><strong>Información de Escolaridad, Analfabetismo y UGAS:</strong> Datos sobre niveles educativos, tasas de alfabetización y distribución de las Unidades de Gestión Ambiental en Hidalgo.</li>
-        <li><strong>Medio Físico:</strong> Información sobre el relieve, tipos de suelo, recursos hídricos y características geográficas del estado.</li>
-        <li><strong>Información de Riesgos:</strong> Mapas y datos relacionados con riesgos naturales, como inundaciones, deslaves y áreas de vulnerabilidad.</li>
+  <section
+    id="descargas"
+    style="
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+    "
+  >
+    <h3 style="text-align: center; color: #2c3e50; margin-bottom: 1rem">
+      Opciones de descarga
+    </h3>
+    <p style="text-align: center; color: #34495e; margin-bottom: 2rem">
+      Descarga unificada de información relevante sobre el estado de Hidalgo.
+    </p>
+
+    <div style="margin-bottom: 1.5rem">
+      <h4 style="color: #2c3e50">Contenido del archivo ZIP:</h4>
+      <ul style="color: #34495e; line-height: 1.6">
+        <li>
+          <strong
+            >Información de pobreza, Marginación, Equidad e Inclusión:</strong
+          >
+          Incluye estadísticas detalladas y análisis relacionados con los
+          índices de pobreza, marginación y desigualdad en el estado.
+        </li>
+        <li>
+          <strong>Información de Escolaridad, Analfabetismo y UGAS:</strong>
+          Datos sobre niveles educativos, tasas de alfabetización y distribución
+          de las Unidades de Gestión Ambiental en Hidalgo.
+        </li>
+        <li>
+          <strong>Medio Físico:</strong> Información sobre el relieve, tipos de
+          suelo, recursos hídricos y características geográficas del estado.
+        </li>
+        <li>
+          <strong>Información de Riesgos:</strong> Mapas y datos relacionados
+          con riesgos naturales, como inundaciones, deslaves y áreas de
+          vulnerabilidad.
+        </li>
       </ul>
     </div>
-  
-    <div style="text-align: center;">
-      <button 
-      style="background-color: #2c3e50; color: white; padding: 0.75rem 1.5rem; font-size: 1rem; border: none; border-radius: 5px; cursor: pointer;" 
-      onclick="window.open('https://drive.google.com/drive/folders/1nHDl87ZOFIUUwJDSaBQf8zG3wxOPZuVN?usp=drive_link', '_blank');" 
-      title="Descargar archivo ZIP unificado">
-      Descargar
-    </button>
+
+    <div style="text-align: center">
+      <button
+        style="
+          background-color: #2c3e50;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+        onclick="window.open('https://drive.google.com/drive/folders/1nHDl87ZOFIUUwJDSaBQf8zG3wxOPZuVN?usp=drive_link', '_blank');"
+        title="Descargar archivo ZIP unificado"
+      >
+        Descargar
+      </button>
     </div>
   </section>
-  <section style="background-color: white; padding: 2rem; margin-top: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-    <h2 style="color: #2c3e50; text-align: center;">Referencias</h2>
-    <ul style="color: #34495e; line-height: 1.6; list-style-type: none; padding-left: 0; margin-top: 1rem;">
-      <li>Atlas Nacional de Riesgos. (s.f.). <a href="http://www.atlasnacionalderiesgos.gob.mx/" target="_blank">http://www.atlasnacionalderiesgos.gob.mx/</a></li>
-      <li>DOLORES HIDALGO. (CONACULTA). <a href="https://www.cultura.gob.mx/turismocultural/destino_mes/guanajuato/dolores.html" target="_blank">https://www.cultura.gob.mx/turismocultural/destino_mes/guanajuato/dolores.html</a></li>
-      <li>Congreso de los Estados Unidos Mexicanos. (1983). Reglamento de la Ley de Planeación. Última reforma: 13 de abril de 2022. Diario Oficial de la Federación. Recuperado de: <a href="https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LPlan.pdf" target="_blank">https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LPlan.pdf</a></li>
-      <li>Congreso de los Estados Unidos Mexicanos. (1988). Ley General del Equilibrio Ecológico y la Protección al Ambiente. Última reforma: 22 de diciembre de 2021. Diario Oficial de la Federación. Recuperado de: <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/148_221221.pdf" target="_blank">https://www.diputados.gob.mx/LeyesBiblio/pdf/148_221221.pdf</a></li>
-      <li>Congreso de los Estados Unidos Mexicanos. (1993). Ley General de Educación. Última reforma: 19 de abril de 2022. Diario Oficial de la Federación. Recuperado de: <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGE.pdf" target="_blank">https://www.diputados.gob.mx/LeyesBiblio/pdf/LGE.pdf</a></li>
-      <li>Congreso de los Estados Unidos Mexicanos. (2001). Ley de Desarrollo Rural Sustentable. Última reforma: 14 de junio de 2018. Diario Oficial de la Federación. Recuperado de: <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/247_140618.pdf" target="_blank">https://www.diputados.gob.mx/LeyesBiblio/pdf/247_140618.pdf</a></li>
-      <li>Congreso de los Estados Unidos Mexicanos. (2012). Ley General de Protección Civil. Última reforma: 13 de junio de 2023. Diario Oficial de la Federación. Recuperado de: <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPC_130623.pdf" target="_blank">https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPC_130623.pdf</a></li>
-      <li>Congreso de los Estados Unidos Mexicanos. (2016). Ley General de Asentamientos Humanos, Ordenamiento Territorial y Desarrollo Urbano. Última reforma: 15 de mayo de 2023. Diario Oficial de la Federación. Recuperado de: <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGAHOTDU.pdf" target="_blank">https://www.diputados.gob.mx/LeyesBiblio/pdf/LGAHOTDU.pdf</a></li>
-      <li>Ecología Verde. (s.f.). Cómo influye el alivio en el clima. Recuperado de: <a href="https://www.ecologiaverde.com" target="_blank">https://www.ecologiaverde.com</a></li>
-      <li>El clima en Hidalgo, el tiempo por mes, temperatura promedio (México) (Weather Spark.). <a href="https://es.weatherspark.com/y/5168/Clima-promedio-en-Hidalgo-M%C3%A9xico-durante-todo-el-a%C3%B1o" target="_blank">https://es.weatherspark.com/y/5168/Clima-promedio-en-Hidalgo-M%C3%A9xico-durante-todo-el-a%C3%B1o</a></li>
-      <li>El Heraldo de Chiapas. (2023). En Chiapas, el 86% de la población adulta es analfabeta: INEGI. Recuperado de: <a href="https://www.elheraldodechiapas.com.mx/local/en-chiapas-el-86-de-la-poblacion-adulta-es-analfabeta-inegi-7125955.html" target="_blank">https://www.elheraldodechiapas.com.mx/local/en-chiapas-el-86-de-la-poblacion-adulta-es-analfabeta-inegi-7125955.html</a></li>
-      <li>Esri. (n.d.). ArcGIS Map Viewer: Mexican States - Geographic Boundaries. Recuperado el [25 de Noviembre de 2024], de: <a href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=32723d8679b348f391cebaef8e144033" target="_blank">https://www.arcgis.com/apps/mapviewer/index.html?webmap=32723d8679b348f391cebaef8e144033</a></li>
-      <li>Gobierno del Estado de Hidalgo. (2023). Plan Estatal de Desarrollo Urbano y Ordenamiento Territorial de Hidalgo. Secretaría de Obras Públicas y Ordenamiento Territorial. Recuperado de: <a href="https://hidalgo.gob.mx/" target="_blank">https://hidalgo.gob.mx/</a></li>
-      <li>Gobierno del Estado de Hidalgo. (n.d.). Hidalgo: Cultura, historia y tradiciones. Recuperado el [24/11/2024], de: <a href="https://www.hidalgo.gob.mx" target="_blank">https://www.hidalgo.gob.mx</a></li>
-      <li>Instituto Hidalguense de Educación para Adultos. (s.f.). Recuperado de: <a href="https://ihea.hidalgo.gob.mx/" target="_blank">https://ihea.hidalgo.gob.mx/</a></li>
-      <li>Instituto Nacional de Estadística y Geografía. (2020). Sistema de Información sobre Ciencia y Tecnología en México (SCINCE 2020). Recuperado de: <a href="https://gaia.inegi.org.mx/scince2020/" target="_blank">https://gaia.inegi.org.mx/scince2020/</a></li>
-      <li>Instituto Nacional de Estadística y Geografía (INEGI). Climatología. Recuperado de: <a href="https://www.inegi.org.mx/" target="_blank">https://www.inegi.org.mx/</a></li>
-      <li>Instituto Nacional de Estadística y Geografía. (INEGI). Cuentame: Monografías sobre educación en Hidalgo. Recuperado de: <a href="https://cuentame.inegi.org.mx/monografias/informacion/hgo/poblacion/educacion.aspx" target="_blank">https://cuentame.inegi.org.mx/monografias/informacion/hgo/poblacion/educacion.aspx</a></li>
-      <li>Universidad Nacional Autónoma de México. (s.f.). Capítulo 00: Texto 00-08a. Recuperado de: <a href="https://www.planeducativonacional.unam.mx/CAP_00/Text/00_08a.html" target="_blank">https://www.planeducativonacional.unam.mx/CAP_00/Text/00_08a.html</a></li>
-      <li>Universidad de Granada. (s.f.). Geografía Física. Recuperado de: <a href="http://geofireg.ugr.es/" target="_blank">http://geofireg.ugr.es/</a></li>
+  <section
+    style="
+      background-color: white;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    "
+  >
+    <h2 style="color: #2c3e50; text-align: center">Referencias</h2>
+    <ul
+      style="
+        color: #34495e;
+        line-height: 1.6;
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 1rem;
+      "
+    >
+      <li>
+        Atlas Nacional de Riesgos. (s.f.).
+        <a href="http://www.atlasnacionalderiesgos.gob.mx/" target="_blank"
+          >http://www.atlasnacionalderiesgos.gob.mx/</a
+        >
+      </li>
+      <li>
+        DOLORES HIDALGO. (CONACULTA).
+        <a
+          href="https://www.cultura.gob.mx/turismocultural/destino_mes/guanajuato/dolores.html"
+          target="_blank"
+          >https://www.cultura.gob.mx/turismocultural/destino_mes/guanajuato/dolores.html</a
+        >
+      </li>
+      <li>
+        Congreso de los Estados Unidos Mexicanos. (1983). Reglamento de la Ley
+        de Planeación. Última reforma: 13 de abril de 2022. Diario Oficial de la
+        Federación. Recuperado de:
+        <a
+          href="https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LPlan.pdf"
+          target="_blank"
+          >https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LPlan.pdf</a
+        >
+      </li>
+      <li>
+        Congreso de los Estados Unidos Mexicanos. (1988). Ley General del
+        Equilibrio Ecológico y la Protección al Ambiente. Última reforma: 22 de
+        diciembre de 2021. Diario Oficial de la Federación. Recuperado de:
+        <a
+          href="https://www.diputados.gob.mx/LeyesBiblio/pdf/148_221221.pdf"
+          target="_blank"
+          >https://www.diputados.gob.mx/LeyesBiblio/pdf/148_221221.pdf</a
+        >
+      </li>
+      <li>
+        Congreso de los Estados Unidos Mexicanos. (1993). Ley General de
+        Educación. Última reforma: 19 de abril de 2022. Diario Oficial de la
+        Federación. Recuperado de:
+        <a
+          href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGE.pdf"
+          target="_blank"
+          >https://www.diputados.gob.mx/LeyesBiblio/pdf/LGE.pdf</a
+        >
+      </li>
+      <li>
+        Congreso de los Estados Unidos Mexicanos. (2001). Ley de Desarrollo
+        Rural Sustentable. Última reforma: 14 de junio de 2018. Diario Oficial
+        de la Federación. Recuperado de:
+        <a
+          href="https://www.diputados.gob.mx/LeyesBiblio/pdf/247_140618.pdf"
+          target="_blank"
+          >https://www.diputados.gob.mx/LeyesBiblio/pdf/247_140618.pdf</a
+        >
+      </li>
+      <li>
+        Congreso de los Estados Unidos Mexicanos. (2012). Ley General de
+        Protección Civil. Última reforma: 13 de junio de 2023. Diario Oficial de
+        la Federación. Recuperado de:
+        <a
+          href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPC_130623.pdf"
+          target="_blank"
+          >https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPC_130623.pdf</a
+        >
+      </li>
+      <li>
+        Congreso de los Estados Unidos Mexicanos. (2016). Ley General de
+        Asentamientos Humanos, Ordenamiento Territorial y Desarrollo Urbano.
+        Última reforma: 15 de mayo de 2023. Diario Oficial de la Federación.
+        Recuperado de:
+        <a
+          href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGAHOTDU.pdf"
+          target="_blank"
+          >https://www.diputados.gob.mx/LeyesBiblio/pdf/LGAHOTDU.pdf</a
+        >
+      </li>
+      <li>
+        Ecología Verde. (s.f.). Cómo influye el alivio en el clima. Recuperado
+        de:
+        <a href="https://www.ecologiaverde.com" target="_blank"
+          >https://www.ecologiaverde.com</a
+        >
+      </li>
+      <li>
+        El clima en Hidalgo, el tiempo por mes, temperatura promedio (México)
+        (Weather Spark.).
+        <a
+          href="https://es.weatherspark.com/y/5168/Clima-promedio-en-Hidalgo-M%C3%A9xico-durante-todo-el-a%C3%B1o"
+          target="_blank"
+          >https://es.weatherspark.com/y/5168/Clima-promedio-en-Hidalgo-M%C3%A9xico-durante-todo-el-a%C3%B1o</a
+        >
+      </li>
+      <li>
+        El Heraldo de Chiapas. (2023). En Chiapas, el 86% de la población adulta
+        es analfabeta: INEGI. Recuperado de:
+        <a
+          href="https://www.elheraldodechiapas.com.mx/local/en-chiapas-el-86-de-la-poblacion-adulta-es-analfabeta-inegi-7125955.html"
+          target="_blank"
+          >https://www.elheraldodechiapas.com.mx/local/en-chiapas-el-86-de-la-poblacion-adulta-es-analfabeta-inegi-7125955.html</a
+        >
+      </li>
+      <li>
+        Esri. (n.d.). ArcGIS Map Viewer: Mexican States - Geographic Boundaries.
+        Recuperado el [25 de Noviembre de 2024], de:
+        <a
+          href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=32723d8679b348f391cebaef8e144033"
+          target="_blank"
+          >https://www.arcgis.com/apps/mapviewer/index.html?webmap=32723d8679b348f391cebaef8e144033</a
+        >
+      </li>
+      <li>
+        Gobierno del Estado de Hidalgo. (2023). Plan Estatal de Desarrollo
+        Urbano y Ordenamiento Territorial de Hidalgo. Secretaría de Obras
+        Públicas y Ordenamiento Territorial. Recuperado de:
+        <a href="https://hidalgo.gob.mx/" target="_blank"
+          >https://hidalgo.gob.mx/</a
+        >
+      </li>
+      <li>
+        Gobierno del Estado de Hidalgo. (n.d.). Hidalgo: Cultura, historia y
+        tradiciones. Recuperado el [24/11/2024], de:
+        <a href="https://www.hidalgo.gob.mx" target="_blank"
+          >https://www.hidalgo.gob.mx</a
+        >
+      </li>
+      <li>
+        Instituto Hidalguense de Educación para Adultos. (s.f.). Recuperado de:
+        <a href="https://ihea.hidalgo.gob.mx/" target="_blank"
+          >https://ihea.hidalgo.gob.mx/</a
+        >
+      </li>
+      <li>
+        Instituto Nacional de Estadística y Geografía. (2020). Sistema de
+        Información sobre Ciencia y Tecnología en México (SCINCE 2020).
+        Recuperado de:
+        <a href="https://gaia.inegi.org.mx/scince2020/" target="_blank"
+          >https://gaia.inegi.org.mx/scince2020/</a
+        >
+      </li>
+      <li>
+        Instituto Nacional de Estadística y Geografía (INEGI). Climatología.
+        Recuperado de:
+        <a href="https://www.inegi.org.mx/" target="_blank"
+          >https://www.inegi.org.mx/</a
+        >
+      </li>
+      <li>
+        Instituto Nacional de Estadística y Geografía. (INEGI). Cuentame:
+        Monografías sobre educación en Hidalgo. Recuperado de:
+        <a
+          href="https://cuentame.inegi.org.mx/monografias/informacion/hgo/poblacion/educacion.aspx"
+          target="_blank"
+          >https://cuentame.inegi.org.mx/monografias/informacion/hgo/poblacion/educacion.aspx</a
+        >
+      </li>
+      <li>
+        Universidad Nacional Autónoma de México. (s.f.). Capítulo 00: Texto
+        00-08a. Recuperado de:
+        <a
+          href="https://www.planeducativonacional.unam.mx/CAP_00/Text/00_08a.html"
+          target="_blank"
+          >https://www.planeducativonacional.unam.mx/CAP_00/Text/00_08a.html</a
+        >
+      </li>
+      <li>
+        Universidad de Granada. (s.f.). Geografía Física. Recuperado de:
+        <a href="http://geofireg.ugr.es/" target="_blank"
+          >http://geofireg.ugr.es/</a
+        >
+      </li>
     </ul>
   </section>
-  <div style="text-align: center;">  
-  <button 
-  style="background-color: #2c3e50; color: white; padding: 0.75rem 1.5rem; font-size: 1rem; border: none; border-radius: 5px; cursor: pointer;" 
-  onclick="window.open('https://osmarunam.github.io/El-visor/#9/20.4974/-98.9203', '_blank');" 
-  title="Abrir el Visor">
-  Visor
-</button>
-</div>
-
-  
+  <div style="text-align: center">
+    <button
+      style="
+        background-color: #2c3e50;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      "
+      onclick="window.open('https://osmarunam.github.io/El-visor/#9/20.4974/-98.9203', '_blank');"
+      title="Abrir el Visor"
+    >
+      Visor
+    </button>
+  </div>
 </main>
 
 <footer>
